@@ -11,7 +11,9 @@ namespace HS_Communications_Website.Portal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
+                Label1.Text = Session["name"].ToString();
+          
         }
     }
 }

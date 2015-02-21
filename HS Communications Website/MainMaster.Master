@@ -74,10 +74,10 @@
                     $('#popup').bPopup({
                         fadeSpeed: 'slow', //can be a string ('slow'/'fast') or int
                         followSpeed: 1500, //can be a string ('slow'/'fast') or int
-                        modalColor: 'darkBlue'
+                        modalColor: 'darkBlue',
+                        appendTo: "form"
                     });
-                 
-                });
+                   });
             });
         })(jQuery);
     </script>
@@ -158,8 +158,9 @@
         <div id="popup" >
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-              <h3>Login</h3> Username: <asp:TextBox ID="usernameTxtbox" runat="server"></asp:TextBox>
-        Password: <asp:TextBox ID="passTxtbox" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:Label ID="errorLbl" runat="server" Text="Label"></asp:Label>
+              <h3>Login</h3> Username: <asp:TextBox ID="usernameTxtbox" runat="server" ></asp:TextBox>
+        Password: <asp:TextBox ID="passTxtbox" runat="server" TextMode="Password" ></asp:TextBox>
              
             <asp:LinkButton ID="loginBtn1" runat="server" OnClick="loginBtn_Click" CssClass="buttonn">Login</asp:LinkButton>
        </ContentTemplate>

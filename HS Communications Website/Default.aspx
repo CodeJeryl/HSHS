@@ -4,8 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
     <div id="container" class="opacity"> 
-     <p> testing one two three branch</p>
-    <!-- Begin Showcase -->
+     <!-- Begin Showcase -->
     <div id="showcase" class="showcase"> 
       <!-- Each child div in #showcase represents a slide -->
       <div class="showcase-slide"> 
