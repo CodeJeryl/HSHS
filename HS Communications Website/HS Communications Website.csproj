@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Faculty\Fhomepage.aspx" />
+    <Content Include="Faculty\Messages.aspx" />
     <Content Include="images\testlogot.png" />
     <Content Include="js\carousel.js" />
     <Content Include="js\ddsmoothmenu.js" />
@@ -469,6 +470,13 @@
     </Compile>
     <Compile Include="Faculty\Fhomepage.aspx.designer.cs">
       <DependentUpon>Fhomepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\Messages.aspx.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\Messages.aspx.designer.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
     </Compile>
     <Compile Include="MainMaster.Master.cs">
       <DependentUpon>MainMaster.Master</DependentUpon>
