@@ -120,7 +120,7 @@
                   </SelectedItemTemplate>
                 </asp:ListView>
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [title], [sender], [userlvl] FROM [msgTbl] WHERE (parent=@parent and section='all') OR (([parent] = @parent) AND ([section] = @section))">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [title], [sender], [userlvl] FROM [msgTbl] WHERE [parent] = @parent AND [section] IN (@section,'all')">
                     <SelectParameters>
                         <asp:SessionParameter DefaultValue="false" Name="parent" SessionField="parent" Type="Boolean" />
                         <asp:SessionParameter DefaultValue="all" Name="section" SessionField="section" Type="String" />
