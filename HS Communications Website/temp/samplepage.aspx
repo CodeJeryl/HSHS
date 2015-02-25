@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Faculty/FacuMaster.Master" AutoEventWireup="true" CodeBehind="Fhomepage.aspx.cs" Inherits="HS_Communications_Website.Faculty.Fhomepage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/temp/test.Master" AutoEventWireup="true" CodeBehind="samplepage.aspx.cs" Inherits="HS_Communications_Website.templatesss.je.samplepage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  
- <div id="container" class="opacity">
+     <div id="container" class="opacity">
             <div class="full-width">
            
                     <h2>About Us</h2>

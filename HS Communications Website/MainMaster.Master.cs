@@ -45,7 +45,6 @@ namespace HS_Communications_Website
                         {
                             Session["Adviser"] = "1";
 
-
                             //conek1.Close();
                             //conek1.Open();
 
@@ -96,13 +95,19 @@ namespace HS_Communications_Website
                         rd.Close();
                         SqlCommand comsearch1 =
                             new SqlCommand(
-                                "Select * From studentTab where studno = '" + usernameTxtbox.Text + "' and password = '" +
+                                "Select * From LoginView where username = '" + usernameTxtbox.Text + "' and password = '" +
                                 passTxtbox.Text + "' and activated = 1", conek);
                         SqlDataReader rd1 = comsearch1.ExecuteReader();
                         if (rd1.Read())
                         {
+                            char last = usernameTxtbox.Text[usernameTxtbox.Text.Length - 1];
+                            if(last.ToString() == "P")
+                            {
                             Session["studno"] = rd1.GetInt32(0);
                             Session["name"] = rd1.GetString(1);
+                                Session["section"] = rd1.GetString(4);
+                                Session["year"] = rd1.GetInt32(5);
+                                Session["Parent"] = "1";
 
                             //conek1.Close();
                             //conek1.Open();
@@ -115,6 +120,7 @@ namespace HS_Communications_Website
                             System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
 
                             Response.Redirect("~/Portal/Phomepage.aspx", false);
+                            }
                         }
                         else
                         {
