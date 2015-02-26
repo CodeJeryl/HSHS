@@ -10,9 +10,6 @@
                 <div class="two-third last">--%>
                     <h2>Send Message</h2>
                   
-
-                
-                
                  <br />
                     <br />
                     <h4>Fermentum Purus Ipsum</h4>
