@@ -44,7 +44,7 @@ namespace HS_Communications_Website
                     if (level == "Principal")
                     {
                         Session["Adviser"] = "1";
-
+                        Session["level"] = "Principal";
                         //conek1.Close();
                         //conek1.Open();
 
