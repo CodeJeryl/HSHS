@@ -13,5 +13,10 @@ namespace HS_Communications_Website.Portal
         {
 
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
     }
 }

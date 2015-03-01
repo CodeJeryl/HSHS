@@ -45,6 +45,7 @@ namespace HS_Communications_Website
                     {
                         Session["Adviser"] = "1";
                         Session["level"] = "Principal";
+                        Session["username"] = rd.GetString(2);
                         //conek1.Close();
                         //conek1.Open();
 
@@ -93,10 +94,11 @@ namespace HS_Communications_Website
                     conek1.Open();
 
                     rd.Close();
+
                     SqlCommand comsearch1 =
                         new SqlCommand(
                             "Select * From LoginView where username = '" + usernameTxtbox.Text + "' and password = '" +
-                            passTxtbox.Text + "' and activated = 1", conek);
+                            passTxtbox.Text + "' and activated = 1", conek1);
                     SqlDataReader rd1 = comsearch1.ExecuteReader();
                     if (rd1.Read())
                     {
@@ -105,6 +107,7 @@ namespace HS_Communications_Website
                         {
                             Session["studno"] = rd1.GetInt32(0);
                             Session["name"] = rd1.GetString(1);
+                            Session["username"] = rd1.GetString(2);
                             Session["section"] = rd1.GetString(4);
                             Session["year"] = rd1.GetInt32(5);
                             Session["Parent"] = "true";
@@ -124,6 +127,7 @@ namespace HS_Communications_Website
                         {
                             Session["studno"] = rd1.GetInt32(0);
                             Session["name"] = rd1.GetString(1);
+                            Session["username"] = rd1.GetString(2);
                             Session["section"] = rd1.GetString(4);
                             Session["year"] = rd1.GetInt32(5);
                             Session["Parent"] = "false";
