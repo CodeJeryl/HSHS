@@ -16,7 +16,10 @@
 	-o-transition:all 200ms ease-in;
 	-moz-transition:all 200ms ease-in;   
 }*/
-
+p.leftt {
+    padding-left: 30px;
+    text-align: justify;
+}
 .buttonn {
     border-style: solid;
   border-width: 0;
